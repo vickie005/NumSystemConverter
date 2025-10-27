@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NumSys Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔢 NumSys Converter</h1>
+    <p class="subtitle">Convert numbers between Binary, Decimal, Octal, Hex, and more!</p>
+
+    <div class="converter">
+      <input type="text" id="inputNumber" placeholder="Enter your number..." />
+
+      <div class="selectors">
+        <select id="fromSystem" title="From System">
+          <option value="2">Binary</option>
+          <option value="8">Octal</option>
+          <option value="10" selected>Decimal</option>
+          <option value="16">Hexadecimal</option>
+          <option value="1s">1's Complement</option>
+          <option value="2s">2's Complement</option>
+          <option value="naf">NAF</option>
+        </select>
+
+        <span class="arrow">➡</span>
+
+        <select id="toSystem" title="To System">
+          <option value="2">Binary</option>
+          <option value="8">Octal</option>
+          <option value="10">Decimal</option>
+          <option value="16" selected>Hexadecimal</option>
+          <option value="1s">1's Complement</option>
+          <option value="2s">2's Complement</option>
+          <option value="naf">NAF</option>
+        </select>
+      </div>
+
+      <button id="convertBtn">Convert 🔁</button>
+      <button id="convertAllBtn">Convert to All 🌐</button>
+
+      <div class="output">
+        <h2>Result:</h2>
+        <p id="result">—</p>
+        <button id="copyBtn">📋 Copy</button>
+      </div>
+
+      <div class="history">
+        <h3>Conversion History</h3>
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

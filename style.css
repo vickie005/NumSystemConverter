@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #d6b3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px #a259ff;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #a259ff;
+  text-shadow: 0 0 15px #a259ff;
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+  color: #d8b3ff;
+}
+
+.converter {
+  margin-top: 1.5rem;
+}
+
+input {
+  width: 80%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background: #111;
+  color: #caa7ff;
+  text-align: center;
+  margin-bottom: 1rem;
+  box-shadow: inset 0 0 10px #a259ff;
+}
+
+.selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+select {
+  padding: 0.6rem;
+  font-size: 1rem;
+  background: #111;
+  color: #caa7ff;
+  border: 1px solid #a259ff;
+  border-radius: 0.5rem;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #b984ff;
+}
+
+button {
+  background: #a259ff;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 0.3rem;
+  transition: 0.3s;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background: #8f45ff;
+  box-shadow: 0 0 15px #a259ff;
+}
+
+.output {
+  margin-top: 1.5rem;
+  background: #111;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  box-shadow: inset 0 0 10px #a259ff;
+}
+
+.output h2 {
+  margin-bottom: 0.5rem;
+  color: #cfa9ff;
+}
+
+#result {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 0 0 8px #b984ff;
+}
+
+.history {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.history h3 {
+  margin-bottom: 0.5rem;
+  color: #a259ff;
+}
+
+#historyList {
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#historyList li {
+  background: #111;
+  padding: 0.5rem;
+  margin-bottom: 0.3rem;
+  border-left: 4px solid #a259ff;
+  font-size: 0.9rem;
+  color: #e4ccff;
+}

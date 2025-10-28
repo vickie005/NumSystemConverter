@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Share Tech Mono', monospace;
-  background: url('background.jpg') no-repeat center center fixed;
+  background: url('assets/background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #d6b3ff;
   display: flex;

@@ -1,70 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NumSys Converter</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#7d3cff">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons1.png">
-  <link rel="apple-touch-icon" href="icons2.png">
-  <meta name="description" content="NumSys Converter - Convert numbers between Decimal, Binary, Octal, and Hexadecimal systems.">
-</head>
-<h1>🔢 NumSys Converter</h1>
-    <div class="converter">
-      <input type="text" id="inputNumber" placeholder="Enter your number..." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NumSys Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#7d3cff" />
+    <link rel="icon" type="image/png" sizes="192x192" href="icons1.png" />
+    <link rel="apple-touch-icon" href="icons2.png" />
+    <meta
+      name="description"
+      content="NumSys Converter - Convert numbers between Decimal, Binary, Octal, and Hexadecimal systems."
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🔢 NumSys Converter</h1>
+      <p class="subtitle">
+        Convert numbers between Binary, Decimal, Octal, Hex, and more!
+      </p>
 
-      <div class="selectors">
-        <select id="fromSystem" title="From System">
-          <option value="2">Binary</option>
-          <option value="8">Octal</option>
-          <option value="10" selected>Decimal</option>
-          <option value="16">Hexadecimal</option>
-          <option value="1s">1's Complement</option>
-          <option value="2s">2's Complement</option>
-          <option value="naf">NAF</option>
-        </select>
+      <div class="converter">
+        <input
+          type="text"
+          id="inputNumber"
+          placeholder="Enter your number..."
+        />
 
-        <span class="arrow">➡</span>
+        <div class="selectors">
+          <select id="fromSystem" title="From System">
+            <option value="2">Binary</option>
+            <option value="8">Octal</option>
+            <option value="10" selected>Decimal</option>
+            <option value="16">Hexadecimal</option>
+            <option value="1s">1's Complement</option>
+            <option value="2s">2's Complement</option>
+            <option value="naf">NAF</option>
+          </select>
 
-        <select id="toSystem" title="To System">
-          <option value="2">Binary</option>
-          <option value="8">Octal</option>
-          <option value="10">Decimal</option>
-          <option value="16" selected>Hexadecimal</option>
-          <option value="1s">1's Complement</option>
-          <option value="2s">2's Complement</option>
-          <option value="naf">NAF</option>
-        </select>
-      </div>
+          <span class="arrow">➡</span>
 
-      <button id="convertBtn">Convert 🔁</button>
-      <button id="convertAllBtn">Convert to All 🌐</button>
+          <select id="toSystem" title="To System">
+            <option value="2">Binary</option>
+            <option value="8">Octal</option>
+            <option value="10">Decimal</option>
+            <option value="16" selected>Hexadecimal</option>
+            <option value="1s">1's Complement</option>
+            <option value="2s">2's Complement</option>
+            <option value="naf">NAF</option>
+          </select>
+        </div>
 
-      <div class="output">
-        <h2>Result:</h2>
-        <p id="result">—</p>
-        <button id="copyBtn">📋 Copy</button>
-      </div>
+        <button id="convertBtn">Convert 🔁</button>
+        <button id="convertAllBtn">Convert to All 🌐</button>
 
-      <div class="history">
-        <h3>Conversion History</h3>
-        <ul id="historyList"></ul>
+        <div class="output">
+          <h2>Result:</h2>
+          <p id="result">—</p>
+          <button id="copyBtn">📋 Copy</button>
+        </div>
+
+        <div class="history">
+          <h3>Conversion History</h3>
+          <ul id="historyList"></ul>
+        </div>
       </div>
     </div>
-  </div>
-   <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("./service-worker.js")
-        .then((reg) => console.log("Service Worker registered ✅", reg))
-        .catch((err) => console.error("Service Worker registration failed ❌", err));
-    });
-  }
-</script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./service-worker.js")
+            .then((reg) => console.log("Service Worker registered ✅", reg))
+            .catch((err) =>
+              console.error("Service Worker registration failed ❌", err)
+            );
+        });
+      }
+    </script>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

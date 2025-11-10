@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NumSys Converter</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#7d3cff">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192x192.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+  <meta name="description" content="NumSys Converter - Convert numbers between Decimal, Binary, Octal, and Hexadecimal systems.">
 </head>
-<body>
-  <div class="container">
-    <h1>🔢 NumSys Converter</h1>
-    <p class="subtitle">Convert numbers between Binary, Decimal, Octal, Hex, and more!</p>
-
     <div class="converter">
       <input type="text" id="inputNumber" placeholder="Enter your number..." />
 
@@ -53,6 +53,16 @@
       </div>
     </div>
   </div>
+   <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("./service-worker.js")
+        .then((reg) => console.log("Service Worker registered ✅", reg))
+        .catch((err) => console.error("Service Worker registration failed ❌", err));
+    });
+  }
+</script>
 
   <script src="script.js"></script>
 </body>
